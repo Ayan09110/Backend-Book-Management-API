@@ -1,0 +1,1 @@
+A RESTful backend API for managing a book collection, built with Express and SQLite. Supports full CRUD operations with persistent storage.
