@@ -1,9 +1,27 @@
 const express = require('express');
-const { Database } = require('sqlite3');
-const db = new Database('database.db');
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database('database.db');
+
+
+db.run(`
+    CREATE TABLE IF NOT EXISTS books (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        author TEXT NOT NULL,
+        year INTEGER,
+        status TEXT NOT NULL CHECK (status IN ('to-read', 'reading', 'completed'))
+    )
+`, (err) => {
+    if (err) {
+        console.error('Error creating table:', err.message);
+    } else {
+        console.log('Books table ready');
+    }
+});
+
 
 const app = express();
-// Optional: Add middleware to parse JSON
+
 app.use(express.json());
 
 // Basic route to test the server
@@ -92,12 +110,12 @@ app.delete('/books/:id', (req,res) => {
         else if(this.changes === 0){
             res.status(404).json({ error: "Book not found"});
         }else{
-            res.json({ message: "Book deleted successfully", id: id});
+            res.json({ message: "Book deleted successfully", id: parseInt(id) });
         }
     });
 });
 
 // Start the server
 app.listen(3000, () => {
-    console.log(`Server running on http://localhost:${3000}`);
+    console.log(`Server running on http://localhost:3000`);
 });

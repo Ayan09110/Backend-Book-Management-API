@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# SQLite database (auto-created by server.js)
+database.db
+*.db
+
+# Environment variables / secrets
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
