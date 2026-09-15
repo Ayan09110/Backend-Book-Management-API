@@ -1,17 +1,20 @@
-## How to Use
+# 📚 Book Management API
 
-This is a backend-only API. There is no frontend interface.
-To interact with the API, use one of the following:
+A RESTful backend API for managing a book collection, built with **Express** and **SQLite**. Supports full CRUD operations with persistent storage.
 
-### Option 1: cURL
-curl -X POST http://localhost:3000/books \
-  -H "Content-Type: application/json" \
-  -d '{"title":"1984","author":"George Orwell","year":1949,"status":"completed"}'
+---
 
-### Option 2: Postman
-1. Import the collection (or create a new request)
-2. Method: POST
-3. URL: http://localhost:3000/books
-4. Body: raw → JSON
-5. Paste the book data
-6. Click Send
+## Tech Stack
+
+- **Backend:** Node.js, Express
+- **Database:** SQLite3
+- **Testing:** cURL (command line)
+
+---
+
+## Setup
+
+1. `cd` into the project folder
+2. `npm install`
+3. `node server.js`
+4. Server runs at **http://localhost:3000**
