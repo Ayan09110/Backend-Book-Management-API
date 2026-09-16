@@ -65,3 +65,4 @@ curl -X POST http://localhost:3000/books \
 ```bash
 curl -X DELETE http://localhost:3000/books/1
 ```
+![screenshot](./operations.png)
