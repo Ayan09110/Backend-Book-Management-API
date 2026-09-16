@@ -17,9 +17,15 @@ A RESTful backend API for managing a book collection, built with **Express** and
 1. `cd` into the project folder
 2. `npm install`
 3. `node server.js`
-4. Server runs at **http://localhost:3000**
+4. You should see:
+    Server running on http://localhost:3000
+    Books table ready
 
-That's it. The database (`database.db`) and `books` table are created automatically on first run.
+**Leave this terminal running.** The server must stay up while you test.
+
+5. Open a SECOND terminal to send requests
+
+The database (`database.db`) and `books` table are created automatically on first run.
 
 ---
 
