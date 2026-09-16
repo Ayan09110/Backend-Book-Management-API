@@ -27,6 +27,8 @@ A RESTful backend API for managing a book collection, built with **Express** and
 
 The database (`database.db`) and `books` table are created automatically on first run.
 
+![screenshot](./setup.png)
+
 ---
 
 ## API Endpoints
